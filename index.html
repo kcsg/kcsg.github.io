@@ -1,0 +1,369 @@
+<!--
+    Things to add--
+
+    Android-like notifications
+    Better wireframes
+    Make the descriptions part of arrays and use ng-repeat to loop through them
+
+-->
+
+<!DOCTYPE html>
+<html ng-app="landingApp">
+    <!-- Created by the KnoKno Dev Team-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>KnoKno</title>
+
+        <!--Stylesheets-->
+        <link href="main.css" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/freelancer.css" rel="stylesheet">
+
+        <!-- Some custom fonts.-->
+        <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    </head>
+
+    <body id="page-top" class="index" ng-controller="defaultLandingController">
+        <div class="container" class="visible-md-block visible-lg-block">
+        <div id="vid-embedded">
+            <iframe width="853" height="480" src="//www.youtube.com/embed/tBTz2I5HlyE?list=UUwVg1WyTNltyoX_mmSFvgmw" frameborder="0" allowfullscreen></iframe>
+        </div>
+        </div>
+
+        <div id="mainpage">
+
+        <!-- Da Navigation Bar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Nav</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#page-top">KNOKNO</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#about">What is KnoKno?</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#contact">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Kno Kno Home -->
+        <header style={{backgroundImage}}>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img class="img-responsive" src="" alt="">
+                        <div class="intro-text">
+                            <!--<span class="name" >This is the KnoKno Tagline</span>-->
+                            <h2>{{ tagline }}</h2>
+                            <hr class="style-seven">
+                                <div style="position: relative;top: -40px" class="col-lg-8 col-lg-offset-2 text-center">
+                                    <a href="#" id="play-button" class="btn btn-lg btn-outline">
+                                        <i class="fa fa-play">{{ play }}</i>
+                                    </a>
+
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Description Section -->
+        <section class="success" id="about">
+            <div class="container">
+
+                 <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h3>You have problems with classes and meetups.</h3>
+                        <br/>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-1">
+                        <h3>{{quote1}}</h3>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-5">
+                        <h3>{{quote2}}</h3>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-1">
+                        <h3>{{quote3}}</h3>
+                    </div>
+                </div>
+                
+                <br><br><br>
+                <hr>
+                <br><br><br>
+
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>KnoKno is here for you.</h1>
+                        <br/>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                 <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h3>{{descriptionMain1}}</h3>
+                        <br/>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p><img src={{image1}} width="100%" /></p>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4">
+                        <h1>{{ descriptionHeader1 }}</h1>
+                        <p>{{ descriptionBody101 }}</p>
+                        <p>{{ descriptionBody102 }}</p>
+                        <p>{{ descriptionBody103 }}</p>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                       
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <hr><br><br><br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4">
+                        <h1>{{ descriptionHeader2 }}</h1>
+                        <p>{{ descriptionBody201 }}</p>
+                        <p>{{ descriptionBody202 }}</p>
+                        <p>{{ descriptionBody203 }}</p>
+                        <p>{{ descriptionBody204 }}</p>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-6">
+                        <p><img src={{image2}} width="100%" /></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <br><br><br>
+            <hr>
+            <br><br><br>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p style="font-size: 200%">{{ descriptionBody3 }}</p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact KnoKno -->
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>Sign up for the mailing list.</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <form name="sentMessage" id="contactForm" novalidate>
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>Name</label>
+                                    <input ng-model="newFormUsername" type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>Email Address</label>
+                                    <input ng-model="newFormEmail" type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>(skiing, rock jumping, laser tag?)</label>
+                                    <input ng-model="formLearn" type="text" class="form-control" placeholder="What would you wanna knokno?" id="name" >
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                             <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>(ping pong, guitar?)</label>
+                                    <input ng-model="formShare" type="text" class="form-control" placeholder="What experiences would you want to share?" id="name" >
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <br>
+                            <div id="success"></div>
+                            <div class="row">
+                                <div class="form-group col-xs-12">
+                                    <button ng-click="createUser()" class="btn btn-lg">Sign Up!</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3>Crafted in New York by Team Kno Kno</h3>
+                            <!--<p>Possibly we could put it here</p>-->
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3>Find us here</h3>
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--<div class="footer-col col-md-4">
+                            <h3>By Team Kno Kno</h3>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            Copyright &copy; KnoKno 2014
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+        <div class="scroll-top page-scroll visible-xs visble-sm">
+            <a class="btn btn-primary" href="#page-top">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+
+        </div>
+
+
+        <!--Resources-->
+        <!-- AngularJS -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-route.js"></script>
+        <!-- jQuery Version 1.11.0 -->
+        <script src="js/jquery-1.11.0.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/cbpAnimatedHeader.js"></script>
+        <!-- Contact Form JavaScript -->
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="js/freelancer.js"></script>
+
+        <!-- App libs -->
+        <script src="app/app.js"></script>
+        <script src="app/factories/landingFactory.js"></script>
+        <script src="app/controllers/landingControllerTemplate.js"></script>
+
+        <script>
+        $(document).ready(function(){
+            var toggle = false;
+
+
+            $("#mainpage").click(function(){
+                toggle = toggle || false;
+                toggleVideo(toggle);
+                toggle = false;
+            })
+
+            $("#play-button").click(function(){
+                toggle = true;
+            })
+
+            function toggleVideo(toggle){
+                if(toggle){
+                    $("#vid-embedded").fadeIn();
+                    $("#mainpage").css("-webkit-filter", "brightness(0.5)");
+                    return false;
+                }else{
+                    $("#vid-embedded").fadeOut();
+                    $("#mainpage").css("-webkit-filter", "brightness(1)");
+                    return true;
+                }
+            }
+
+        })
+
+        </script>
+
+
+    </body>
+
+</html>
